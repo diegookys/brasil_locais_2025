@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guia multimídia com os 10 melhores locais para visitar no Brasil em 2025.">
+    <title>10 Destinos do Brasil em 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">🇧🇷 Brasil 2025</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#destinos">Destinos</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Descubra o Brasil em 2025</h1>
+            <p>Um guia interativo pelos 10 destinos mais incríveis do nosso país.</p>
+            <a href="#destinos" class="btn-cta">Explorar Destinos</a>
+        </div>
+    </header>
+
+    <section id="sobre" class="container section-padding">
+        <h2>Sobre o site</h2>
+        <p>Este site é um guia multimídia desenvolvido para uma tarefa de Front-End. O objetivo é demonstrar o uso de tecnologias web enquanto apresentamos as belezas naturais do Brasil.</p>
+    </section>
+
+    <section class="container search-section">
+        <input type="text" id="input-busca" placeholder="🔍 Busque por um destino (ex: Noronha)...">
+    </section>
+
+    <main id="destinos" class="container grid-destinos section-padding">
+        </main>
+
+    <section id="galeria" class="container section-padding">
+        <h2>Galeria de Destaques</h2>
+        <div class="gallery-grid">
+            <img src="assets/galeria_destaque/paodeacucar.jpg" alt="Vista do Rio de Janeiro">
+            <img src="assets/galeria_destaque/porto-de-galinhas-pe.jpg" alt="Praia no Nordeste">
+            <img src="assets/galeria_destaque/cataratas.jpg" alt="Cataratas do Iguaçu">
+            <img src="assets/galeria_destaque/floresta-amazonica.jpg" alt="Floresta Amazônica">
+        </div>
+    </section>
+
+    <section id="multimidia" class="bg-light section-padding">
+        <div class="container text-center">
+            <h2>Vídeo Tour</h2>
+            <p>Veja um resumo do que te espera.</p>
+            <div class="video-wrapper">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/KLc9NVU-beA" 
+                title="10 VIAGENS PARA FAZER NO BRASIL EM 2025" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container section-padding">
+        <h2>Entre em Contato</h2>
+        <form id="form-contato">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required placeholder="Seu nome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" rows="4" required placeholder="Qual destino você mais gostou?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Diego Santos - UCB 2025</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

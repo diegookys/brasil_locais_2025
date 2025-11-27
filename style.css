@@ -1,0 +1,211 @@
+:root{
+    --primary-color: #009c3b;
+    --secondary-color: #002776;
+    --accent-color: #ffdf00;
+    --text-color: #333;
+    --bg-light: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding{
+    padding: 60px 0;
+}
+
+.text-center{ text-align: center; }
+
+.navbar{
+    background: var(--secondary-color);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li{
+    margin-left: 20px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero{
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/riodejaneiro2.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1{ font-size: 3rem; margin-bottom: 10px;}
+.btn-cta{
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+.btn-cta:hover{ transform: scale(1.05);}
+
+.search-section{
+    margin-top: 30px;
+    text-align: center;
+}
+#input-busca{
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.grid-destinos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card{
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover{ transform: translateY(-5px); }
+
+.card img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content{ padding: 20px; flex-grow: 1;}
+.card-tag{
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.btn-fav{
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    cursor: pointer;
+    padding: 8px;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+.btn-fav.favoritado{
+    background-color: var(--accent-color);
+    font-weight: bold;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.gallery-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+.gallery-grid img:hover{ opacity: 0.8;}
+
+.video-wrapper{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    margin-top: 20px;
+}
+.video-wrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+form{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group{ margin-bottom: 15px;}
+.form-group label{ display: block; margin-bottom: 5px;}
+.form-group input, .form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.btn-submit{
+    background: var(--secondary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+.btn-submit:hover{ background: #003399; }
+
+footer{
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* ajuste para mobile, nao eh garantido que funcione */
+
+@media(max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .nav-links { display: none; }
+}
